@@ -34,7 +34,7 @@ const Registerngo = () => {
           if (name && email && address && city && state && NGOID && pnumber && passwd) {
                if (passwd === reenterpassword) {
 
-                    axios.post("http://localhost:9002/registerngo", user)
+                    axios.post("https://volunteer-management-3p1j.onrender.com/registerngo", user)
                          .then(res => alert(res.data.message))
                     history.push("/loginngo")
                }

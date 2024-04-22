@@ -25,7 +25,7 @@ const Loginngo = () => {
 
     const loginNgo = () => {
         if (emailErrorstatus === "false") {
-            axios.post("http://localhost:9002/loginngo", user)
+            axios.post("https://volunteer-management-3p1j.onrender.com/loginngo", user)
                 .then(res => {
                     localStorage.setItem("currentUser", JSON.stringify(res.data));
 

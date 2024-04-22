@@ -28,7 +28,7 @@ const Registeredevents = () => {
                     cartItems.push(item.id)
                 });
 
-                axios.post(`http://localhost:9002/events/revents_by_id?id=${cartItems}&type=array`).then(res => {
+                axios.post(`https://volunteer-management-3p1j.onrender.com/events/revents_by_id?id=${cartItems}&type=array`).then(res => {
 
 
                     const timeElapsed = Date.now();
@@ -60,7 +60,7 @@ const Registeredevents = () => {
     const removeEvent = (id) => {
         console.log(user.user._id)
         console.log(id);
-        axios.post(`http://localhost:9002/removeregevent/${id}/${user.user._id}`)
+        axios.post(`https://volunteer-management-3p1j.onrender.com/removeregevent/${id}/${user.user._id}`)
             .then(res => {
                 localStorage.setItem("currentUser", JSON.stringify(res.data));
 

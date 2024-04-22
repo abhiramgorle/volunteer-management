@@ -30,7 +30,7 @@ const Loginvol = () => {
     const loginVol = () => {
         if (emailErrorstatus === "false") {
             console.log("logged in")
-            axios.post("http://localhost:9002/loginvol", user)
+            axios.post("https://volunteer-management-3p1j.onrender.com/loginvol", user)
                 .then(res => {
                     localStorage.setItem("currentUser", JSON.stringify(res.data));
 

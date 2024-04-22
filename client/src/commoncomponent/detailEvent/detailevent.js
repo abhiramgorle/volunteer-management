@@ -42,7 +42,7 @@ const Detailevent = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:9002/events/events_by_id?id=${eventId}&type=single`)
+        axios.get(`https://volunteer-management-3p1j.onrender.com/events/events_by_id?id=${eventId}&type=single`)
             .then(res => {
                 setEvent(res.data[0])
                 localStorage.setItem("currentEvent", JSON.stringify(res.data[0]))
@@ -59,7 +59,7 @@ const Detailevent = () => {
             pnumber: user.user.pnumber
         }
 
-        axios.post(`http://localhost:9002/addToCart/${eventId}/${user.user._id}`, variables)
+        axios.post(`https://volunteer-management-3p1j.onrender.com/addToCart/${eventId}/${user.user._id}`, variables)
 
             .then(res => {
                 localStorage.setItem("currentUser", JSON.stringify(res.data));
@@ -78,7 +78,7 @@ const Detailevent = () => {
             lastname: user.user.lastname
         }
         console.log(variables)
-        axios.post(`http://localhost:9002/addToFeedback/${eventId}/${user.user._id}`, variables)
+        axios.post(`https://volunteer-management-3p1j.onrender.com/addToFeedback/${eventId}/${user.user._id}`, variables)
             .then(res =>
                 alert(res.data.message))
 
@@ -93,7 +93,7 @@ const Detailevent = () => {
             lastname: user.user.lastname
         }
         console.log(variables)
-        axios.post(`http://localhost:9002/addToSuggestion/${eventId}/${user.user._id}`, variables)
+        axios.post(`https://volunteer-management-3p1j.onrender.com/addToSuggestion/${eventId}/${user.user._id}`, variables)
             .then(res =>
                 alert(res.data.message))
 

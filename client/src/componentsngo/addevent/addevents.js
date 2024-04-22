@@ -42,7 +42,7 @@ const Updateevents = () => {
           const Data = JSON.stringify({ ...variables, Image });
           console.log(Data)
           if (emailErrorstatus === "false") {
-               axios.post("http://localhost:9002/addevents", { Data, "Content-Type": "application/json" })
+               axios.post("https://volunteer-management-3p1j.onrender.com/addevents", { Data, "Content-Type": "application/json" })
                     .then(res => alert(res.data.message))
                history.push("/homepagengo")
           } else {

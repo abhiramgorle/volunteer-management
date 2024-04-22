@@ -22,7 +22,7 @@ const Detaileventngo = () => {
         // console.log(user.user._id);
 
 
-        axios.get(`http://localhost:9002/events/events_by_id?id=${eventId}&type=single`)
+        axios.get(`https://volunteer-management-3p1j.onrender.com/events/events_by_id?id=${eventId}&type=single`)
             .then(res => {
                 localStorage.setItem("currentEvent", JSON.stringify(res.data[0]))
                 setEvent(res.data[0])
@@ -52,7 +52,7 @@ const Detaileventngo = () => {
 
     const removeEvent = (id) => {
 
-        axios.post(`http://localhost:9002/removefeedback/${eventId}`, id)
+        axios.post(`https://volunteer-management-3p1j.onrender.com/removefeedback/${eventId}`, id)
             .then(res => { window.location.reload(); })
 
     }

@@ -35,7 +35,7 @@ const Registervol = () => {
                if (firstname && lastname && email && address && city && state && gender && pnumber && passwd) {
                     if (passwd === reenterpassword) {
 
-                         axios.post("http://localhost:9002/registervol", user)
+                         axios.post("https://volunteer-management-3p1j.onrender.com/registervol", user)
                               .then(res => alert(res.data.message))
                          history.push("/loginvol")
                     }

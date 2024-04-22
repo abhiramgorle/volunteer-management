@@ -14,7 +14,7 @@ function FileUpload(props) {
     
     formData.append("file", files[0])
         //save the Image we chose inside the Node Server 
-        Axios.post('/api/event/uploadImage', formData, config)
+        Axios.post('https://volunteer-management-3p1j.onrender.com/api/event/uploadImage', formData, config)
             .then(response => {
                 if (response.data.success) {
 

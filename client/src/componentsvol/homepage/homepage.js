@@ -75,7 +75,7 @@ const Homepage = () => {
 
     const getevent = (variables) => {
         axios
-            .post('http://localhost:9002/events', variables)
+            .post('https://volunteer-management-3p1j.onrender.com/events', variables)
             .then(res => {
                 console.log(res)
                 // setevents([...Events, ...res.data.events])

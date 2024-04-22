@@ -24,7 +24,7 @@ const Updatengo = () => {
         }
 
         if (emailErrorstatus === "false") {
-            axios.post("http://localhost:9002/updatengo", variables)
+            axios.post("https://volunteer-management-3p1j.onrender.com/updatengo", variables)
                 .then(res => alert(res.data.message))
         } else {
             alert("please re-enter your Email ID")

@@ -25,7 +25,7 @@ const Updatevol = () => {
         }
 
         if (emailErrorstatus === "false") {
-            axios.post("http://localhost:9002/updatevol", variables)
+            axios.post("https://volunteer-management-3p1j.onrender.com/updatevol", variables)
                 .then(res => alert(res.data.message))
         } else {
             alert("please re-enter your Email ID")

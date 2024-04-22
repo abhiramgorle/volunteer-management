@@ -34,7 +34,7 @@ const Homepagengo = () => {
 
 
         //
-        axios.post(`http://localhost:9002/ngoevents/${user.user.NGOID}`).then(res => {
+        axios.post(`https://volunteer-management-3p1j.onrender.com/ngoevents/${user.user.NGOID}`).then(res => {
 
             setEvent(res.data.event)
               console.log(res.data.event)
